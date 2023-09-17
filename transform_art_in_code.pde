@@ -107,6 +107,7 @@ void draw() {
   translate(15, 205);
   rect(-140, -3003, -3, 118);
   
+  resetMatrix();
   fill(53,53,89);
   translate(73, 82);
   scale(1.6, 1.0);
