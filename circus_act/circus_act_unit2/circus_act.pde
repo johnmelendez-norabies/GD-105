@@ -4,6 +4,7 @@ PVector startMotion;
 PVector start, stop, lerpMotion ;
 float interpolation;
 
+
 color blue = #214893;
 color black = #000000;
 color green = #77E369;
@@ -15,10 +16,10 @@ void setup() {
   size (700, 700);
   //this ball is blue
   blueBall = new PVector();
-  
+
   //this ball is black
   blackBall = new PVector();
-  
+
   //this ball is green
   greenBall = new PVector();
   noStroke();
@@ -35,21 +36,22 @@ void draw() {
   float anglestep = TAU / 100.0;
   float radius = 319;
   translate(width/2, height/2);
-  
+
   greenBall.x = cos(angle) * radius;
-  
-interpolation = 1.00;
-lerpMotion.x = lerp(start.x, stop.x, interpolation);
-lerpMotion.y = lerp(start.y, stop.y, interpolation);
+
+  interpolation = 1.00;
+  lerpMotion.x = lerp(start.x, stop.x, interpolation);
+  lerpMotion.y = lerp(start.y, stop.y, interpolation);
   blackBall.x = sin(angle) * radius;
   blackBall.y = sin(angle) * radius;
 
   angle += anglestep;
 
-drawBall(greenBall, green, 64);
+  drawBall(greenBall, green, 64);
+}
 
-//ceration of the ball and the size
-  drawBall (lerpMotion, black, 80);
-  drawBall(lerpMotion, blue, 62);
+void drawball(PVector location, color blackBall, float ballSize) {
+  fill(ballcolor);
+  circle(location.x, location.y, ballSize);
   
-} 
+}
