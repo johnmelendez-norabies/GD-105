@@ -1,57 +1,45 @@
 //global declare
-PVector greenBall, blackBall, blueBall;
-PVector startMotion;
-PVector start, stop, lerpMotion ;
-float interpolation;
-
-
 color blue = #214893;
 color black = #000000;
 color green = #77E369;
 color paper = #EDF9FA;
-
-float angle = 0;
+//locations on the page that eack circle will be 
+PVector bluePos;
+PVector blackPos;
+PVector  greenPos;
 
 void setup() {
-  size (700, 700);
-  //this ball is blue
-  blueBall = new PVector();
-
-  //this ball is black
-  blackBall = new PVector();
-
-  //this ball is green
-  greenBall = new PVector();
-  noStroke();
-  start = new PVector(64, 64);
-  stop = new PVector(width-64, height-64);
-  lerpMotion = new PVector(start.x, start.y);
+  size (700, 400);
+  //this should set up the blue ball at the bottom left of the screen
+  bluePos = new PVector(50,300);
+  //this should set up the black ball above both balls at center
+  //screen
+  blackPos = new PVector(350,25);
+  //the green ball should be on the same plane as the green ball but on the bottom right
+  greenPos = new PVector(600, 300);
+  //I intend all points to fully, if not, vagugly make a triangle
 }
 
 void draw() {
   background(paper);
 
-  // the float = TAU is the speed at which the ball reaches the sides of the screen
-  //the bigger the number the slower the ball goes & vise verca
-  float anglestep = TAU / 100.0;
-  float radius = 319;
-  translate(width/2, height/2);
+float lerp = map( sin(frameCount*.003), -1, 1, 0, 1);
 
-  greenBall.x = cos(angle) * radius;
+ 
 
-  interpolation = 1.00;
-  lerpMotion.x = lerp(start.x, stop.x, interpolation);
-  lerpMotion.y = lerp(start.y, stop.y, interpolation);
-  blackBall.x = sin(angle) * radius;
-  blackBall.y = sin(angle) * radius;
+ //this ball is blue
+  fill(#214893);
+  circle(bluePos.x, bluePos.y, 44);
 
-  angle += anglestep;
+  //this ball is black
+  fill(#000000);
+  circle(blackPos.x, blackPos.y , 44);
 
-  drawBall(greenBall, green, 64);
-}
-
-void drawball(PVector location, color blackBall, float ballSize) {
-  fill(ballcolor);
-  circle(location.x, location.y, ballSize);
+  //this ball is green
+ fill(#77E369);
+ circle(greenPos.x, greenPos.y , 44);
+  noStroke();
+  
+  
   
 }
