@@ -21,6 +21,8 @@ void setup() {
 void draw() {
   background(paper);
 
+
+
   //this ball is blue
   fill(#214893);
   circle(bluePos.x, bluePos.y, 44);
