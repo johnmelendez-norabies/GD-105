@@ -1,6 +1,11 @@
  PImage beef, cheese;
- random(0,1);
- 
+ boolean beef,cheese = random(1) < 0.45;
+
+if(beef){
+  loadImage("lo_mein.png");
+  if(cheese);
+  loadImage("BE&C.png");
+}
 void setup() {
   size(459, 400);
   beef = loadImage("lo_mein.png");
