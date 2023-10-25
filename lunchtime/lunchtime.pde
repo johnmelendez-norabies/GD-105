@@ -1,32 +1,25 @@
-PImage beef, cheese, coke, dew;
-boolean lomein = random(1) < 0.45;
-boolean cola   = random(1) < 0.50;
+float gold = 400;
+float silver = 300;
 
 void setup() {
-  size(459, 400);
-  beef = loadImage("lo_mein.png");
-  cheese = loadImage("BE&C.png");
-  coke = loadImage("coke-cola.jpg");
-  dew = loadImage("mtndew-original-bottle-439x1024.png");
+  size(400, 700);
+  strokeWeight(2);
 }
 
 void draw() {
+  background(0);
 
-  if (lomein) {
-    scale(.25);
-    image(beef, 0, 0);
-  } else {
-    scale(0.5);
-    image(cheese, 0, 0);
-  }
-  resetMatrix();
-  if (cola) {
-    scale(0.2);
-    image(coke, 0, 0);
-    resetMatrix();
-  } else {
-    scale(0.4);
-    image(dew, 0, 0);
+  float time = 0;
+  while (time < width) {
+    stroke (200);
+    strokeWeight(2);
+    line(time, height - silver, time, height);
+    silver += random(-3, 4);
+
+    stroke (#ffbf00);
+    line(time, height - gold, time + 4, height);
+    gold += random(-1, 8);
+    time += 8;
   }
   noLoop();
 }
