@@ -41,19 +41,19 @@ void draw() {
   float sineWave = sin(frameCount * animationSpeed);
   float interpolation = map(sineWave, -1, 1, 0, 1);
 
-PVector blue = new PVector(lerp(bluePos.x, blackPos.x, interpolation),
-                           lerp(bluePos.y,  blackPos.y, interpolation));
+PVector blue = new PVector(lerp(bluePos.x, bluePos.x, interpolation),
+                           lerp(blackPos.y,  blackPos.y, interpolation));
   fill(lerpColor(#214893, #000000, interpolation));
-  circle(bluePos.x, blackPos.y, 44);
+  circle(bluePos.x, bluePos.y, 44);
   text("bluePos,blackPos\n" + round(interpolation * 100) + "%", bluePos.x + 30, bluePos.y);
   
-  PVector black = new PVector(lerp(blackPos.x, greenPos.x, interpolation),
-                           lerp(blackPos.y,  greenPos.y, interpolation));
-  fill(lerpColor(#214893, #000000, interpolation));
-  circle(blackPos.x, greenPos.y, 44);
+  PVector black = new PVector(lerp(blackPos.x, blackPos.x, interpolation),
+                           lerp(greenPos.y,  greenPos.y, interpolation));
+  fill(lerpColor(#000000, #77E369, interpolation));
+  circle(blackPos.x, blackPos.y, 44);
   
-  PVector green = new PVector(lerp(greenPos.x, bluePos.x, interpolation),
-                           lerp(greenPos.y,  bluePos.y, interpolation));
-  fill(lerpColor(#214893, #000000, interpolation));
-  circle(greenPos.x, bluePos.y, 44);
+  PVector green = new PVector(lerp(greenPos.x, greenPos.x, interpolation),
+                           lerp(bluePos.y,  bluePos.y, interpolation));
+  fill(lerpColor(#77E369, #214893, interpolation));
+  circle(greenPos.x, greenPos.y, 44);
 }
