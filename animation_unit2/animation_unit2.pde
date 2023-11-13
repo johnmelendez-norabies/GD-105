@@ -9,9 +9,9 @@ void setup() {
   frameRate(5);
 
   startMotion = new PVector(64, 64);
-  start = new PVector(64, 128);
-  stop = new PVector(width -64, start.y);
-  flerpMotion = PVector(start.x, start.y);
+  start       = new PVector(64, 128);
+  stop        = new PVector(width -64, start.y);
+  flerpMotion = new PVector(start.x, start.y);
 }
 
 void draw() {
