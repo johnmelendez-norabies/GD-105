@@ -19,14 +19,30 @@ void setup() {
 void draw() {
   //cause a cascading effect that fades over time
   //with a translucent BG
-   fill(255, 25);
-  rect(0, 0, width, height);
+  // fill(255, 25);
+  //rect(0, 0, width, height);
 
   //drawing the balls
   int ballSize = 64;
-   fill(lerpColor(#F8FC00, #3EFC00, interpolation));
+  //red to orange lerpcolor
+   fill(lerpColor(#FA0000, #FAB800, interpolation));
   //liner motion moves at a consistant speed
   circle(startPoint.x, startPoint.y, ballSize);
+  startPoint.x += 10;
+
+//orange to yellow lerpcolor
+   fill(lerpColor(#FAB800, #FAF200, interpolation));
+    circle(64, 128, ballSize);
+  startPoint.x += 10;
+  
+  //yellow to green lepcolor
+  fill(lerpColor(#FAF200, #20FA00, interpolation));
+    circle(64, 192, ballSize);
+  startPoint.x += 10;
+  
+  //green to blue lerpcolor
+  fill(lerpColor(#20FA00, #2400FA, interpolation));
+    circle(64, 256, ballSize);
   startPoint.x += 10;
 
   //lerpMotion is able to move from its start a stop points
