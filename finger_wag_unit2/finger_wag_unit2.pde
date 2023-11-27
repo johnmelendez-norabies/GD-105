@@ -11,6 +11,8 @@ line(312.5, -9999, 312.5, 9999);
 }
 
 void draw(){
-
-  image(pointFinger, 312, 312);
+  scale(0.50);
+  image(pointFinger, -312, -312);
+  
+  
 }
