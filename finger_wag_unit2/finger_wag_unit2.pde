@@ -18,8 +18,8 @@ void draw() {
 
   //this is what rotates the image
   translate(312, 512);
-  line(-9999, 0, 9999, 0);
-  line(0, -9999, 0, 9999);
+  //line(-9999, 0, 9999, 0);
+  //line(0, -9999, 0, 9999);
   rotate(sin(frameCount *0.01) *0.25);
   image(pointFinger, -pointFinger.width *.15, -pointFinger.height *.3,pointFinger.width *.3 ,pointFinger.height *.3);
   
