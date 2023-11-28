@@ -15,7 +15,7 @@ void draw(){
   //image(pointFinger, 792, 16);
   
   rotate(sin(frameCount *0.03) *0.25);
-  translate(554,509);
+  translate(429,-119);
   image(pointFinger,312,312);
   
 }
