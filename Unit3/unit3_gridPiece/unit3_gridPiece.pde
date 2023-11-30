@@ -3,9 +3,9 @@
 int numSquare = 3;
 
 //int allSize = 500;
-color hex1 = #D3D0CB;
-color hex2 = #AFC2BA;
-color hex3 = #44ADA9;
+color hex1 = #3B3B3B;
+color hex2 = #991217;
+color hex3 = #ED1C24;
 
 //declaration
 int[] allSize;
@@ -26,5 +26,11 @@ void draw() {
   //declaration & initalization
 
   fill(hex1);
-  rect(120, 80, 220, 220);
+  rect(0, 0, 500, 216);
+  
+   fill(hex2);
+  rect(0, 0, 500, 216);
+  
+   fill(hex3);
+  rect(0, 0, 500, 216);
 }
