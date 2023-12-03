@@ -6,7 +6,7 @@ color red = #FF0000;
   background(red);
   Calisto = loadFont("CalistoMT-BoldItalic-20.vlw");
   
-  //String m = " ve of your m";
+ 
   
 }
 
@@ -39,59 +39,59 @@ void draw() {
   
   textFont(Calisto);
   textSize(20);
-  text(" of policies   zero ", 295, 466);
+  text(" of policies   zero ", 108, 314);
   
   textFont(Calisto);
   textSize(20);
-  text(" privacies of  every ", 283, 490);
+  text(" privacies of  every ", 53, 355);
   
   textFont(Calisto);
   textSize(20);
-  text(" body  gets   a ", 274, 517);
+  text(" body  gets   a ", 57, 379);
   
   textFont(Calisto);
   textSize(20);
-  text(" turn to frisk me of ", 270, 544);
+  text(" turn to frisk me of ", 38, 407);
   
   textFont(Calisto);
   textSize(20);
-  text(" numbered bodies & ", 272, 576);
+  text(" numbered bodies & ", 52, 442);
   
   textFont(Calisto);
   textSize(20);
-  text(" trophied bodies & ", 275, 603);
+  text(" trophied bodies & ", 81, 477);
   
   textFont(Calisto);
   textSize(20);
-  text(" saturated bodies & ", 282, 633);
+  text(" saturated bodies & ", 159, 540);
   
   textFont(Calisto);
   textSize(20);
-  text(" colored bodies of being ", 293, 660);
+  text(" colored bodies of being ", 106, 510);
   
   textFont(Calisto);
   textSize(20);
-  text(" bloodied in the streets  flag ", 301, 685);
+  text(" bloodied in the streets  flag ", 177, 559);
   
   textFont(Calisto);
   textSize(20);
-  text(" for ever a halfmast of ", 317, 715);
+  text(" for ever a halfmast of ", 240, 597);
   
   textFont(Calisto);
   textSize(20);
-  text(" having knees only to ", 341, 742);
+  text(" having knees only to ", 311, 627);
   
   textFont(Calisto);
   textSize(20);
-  text(" take one  of  finding ", 359, 767);
+  text(" take one  of  finding ", 359, 645);
   
   textFont(Calisto);
   textSize(20);
-  text(" breath  only  to ", 401, 793);
+  text(" breath  only  to ", 447, 678);
   
   textFont(Calisto);
   textSize(20);
-  text(" lose it ", 483, 820);
+  text(" lose it ", 494, 718);
   
   
   if(frameCount == 1) {
