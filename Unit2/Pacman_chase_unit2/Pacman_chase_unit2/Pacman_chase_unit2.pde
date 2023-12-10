@@ -46,4 +46,10 @@ void GhostsCode()
     GMotion.x =0;
 }
 
+ if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
+
 }

@@ -7,7 +7,7 @@ void setup() {
   size(459, 400);
   beef = loadImage("lo_mein.png");
   cheese = loadImage("BE&C.png");
-  coke = loadImage("coke-cola.jpg");
+  coke = loadImage("coke-cola.png");
   dew = loadImage("mtndew-original-bottle-439x1024.png");
   park = loadImage("park_table.jpg");
   home = loadImage("my_cute_cat.jpg");
@@ -42,4 +42,10 @@ void draw() {
   }
   
   noLoop();
+  
+   if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  
 }

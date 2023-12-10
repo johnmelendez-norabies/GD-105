@@ -80,4 +80,11 @@ fill(tri2);
           width*1.00, height*1.01,
           width*1.00, height*0.00);
 resetMatrix();
+
+ if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+  }
+
 }
