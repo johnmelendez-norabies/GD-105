@@ -13,6 +13,8 @@ color red = #FF0000;
 
 void draw() {
   
+  background(red);
+  
   // this is where the text will be
   textFont(Calisto);
   textSize(20);
