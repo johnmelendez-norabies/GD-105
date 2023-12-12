@@ -25,27 +25,28 @@ void draw() {
   }
   
   if (ifLomein) {
-    scale(0.25);
-    image(beef, 0, 0);
+    scale(0.14);
+    image(beef, 1402, 1116);
   } else {
-    scale(0.5);
-    image(cheese, 0, 0);
+    scale(0.3);
+    image(cheese, 605, 399);
   }
   resetMatrix();
   if (ifCola) {
     scale(0.2);
-    image(coke, 0, 0);
+    image(coke, -508, 0);
     resetMatrix();
   } else {
     scale(0.4);
     image(dew, 0, 0);
   }
   
-  noLoop();
+  //noLoop();
   
    if(frameCount == 1) {
     String filename = "output";
     save(filename + ".png");
     print("canvas saved as " + filename + ".png");
+   }
   
 }

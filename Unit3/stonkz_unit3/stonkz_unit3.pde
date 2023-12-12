@@ -30,4 +30,10 @@ void draw() {
     }
   
   noLoop();
+  
+   if(frameCount == 1) {
+    String filename = "output";
+    save(filename + ".png");
+    print("canvas saved as " + filename + ".png");
+   }
 }
