@@ -26,16 +26,16 @@ void draw() {
   
   if (ifLomein) {
     scale(0.14);
-    image(beef, 1402, 1116);
+    image(beef, width/2, height/2);
   } else {
     scale(0.3);
-    image(cheese, 605, 399);
+    image(cheese, width/2, height/2);
   }
   resetMatrix();
   if (ifCola) {
     scale(0.2);
     image(coke, -508, 0);
-    resetMatrix();
+    //resetMatrix();
   } else {
     scale(0.4);
     image(dew, 0, 0);
