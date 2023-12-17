@@ -19,6 +19,8 @@ void setup() {
 
   //initalization
   allSize[0] = 500;
+  allSize[1] = 500;
+  allSize[2] = 500;
 }
 
 void draw() {
@@ -26,11 +28,11 @@ void draw() {
   //declaration & initalization
 
   fill(hex1);
-  rect(0, 0, 500, 216);
+  rect(0, 0, allSize[0], 216);
   
    fill(hex2);
-  rect(0, 213, 500, 179);
+  rect(0, 213, allSize[1], 179);
   
    fill(hex3);
-  rect(0, 300, 500, 221);
+  rect(0, 300, allSize[2], 221);
 }
