@@ -11,8 +11,8 @@ void setup () {
   
   frameRate(5);
   
-  GMotion = new PVector (0, 350);
-  PMotion = new PVector (0, 300);
+  GMotion = new PVector (-100, 350);
+  PMotion = new PVector (-100, 300);
   
   //images for pacman and the ghosts seperatly.
   Pacman1 = loadImage("Pacman1.jpg");
@@ -33,7 +33,7 @@ void PacmanCode()
   PMotion.x += 5;
   
   if ( PMotion.x > 600){
-    PMotion.x =0;
+    PMotion.x =-100;
   }
 }
 
@@ -43,7 +43,7 @@ void GhostsCode()
   GMotion.x += 5;
   
   if (GMotion.x > 600){
-    GMotion.x =0;
+    GMotion.x =-100;
 }
 
  if(frameCount == 1) {
